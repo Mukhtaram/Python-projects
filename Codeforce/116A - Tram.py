@@ -1,11 +1,12 @@
-import sys
-
 n = int(input())
-sumx = 0
-sumy = 0
 sum = 0
-for i in range(n):
-    x = (int, sys.stdin.readline().split())
-    for m in x:
-        sum+=i
-print(sum)
+q = 0
+max = 0
+while n > 0:
+    a, b =map(int, input().split())
+    sum = (b + q) - a
+    q = sum
+    if sum > max:
+        max = sum
+    n-=1
+print(max)
